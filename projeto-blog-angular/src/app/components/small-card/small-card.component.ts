@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-small-card',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './small-card.component.html',
-  styleUrl: './small-card.component.scss'
+  styleUrl: './small-card.component.scss',
 })
 export class SmallCardComponent {
+  @Input()
+  photoCover: string = '';
 
+  @Input()
+  cardTitle: string = '';
+
+  @Input()
+  Id: string = '0';
 }
